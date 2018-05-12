@@ -1,0 +1,22 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:ctrl="clr-namespace:PrismNavigationService.CustonLayouts"
+             x:Class="PrismNavigationService.Views.CustomLayoutPage">
+    <StackLayout>
+        <ctrl:ImageLayout ItemSource="{Binding ImagesSources}"
+                                    Margin="5"
+                                    >
+            <ctrl:ImageLayout.ItemTemplate>
+                <DataTemplate>
+                    <Grid>
+                        <Image Source="https://www.king.senate.gov/imo/media/image/2013%20Senator%20King%20Official%20Portrait1.jpg"/>
+                    </Grid>
+                </DataTemplate>
+            </ctrl:ImageLayout.ItemTemplate>
+        </ctrl:ImageLayout>
+    </StackLayout>
+
+</ContentPage>

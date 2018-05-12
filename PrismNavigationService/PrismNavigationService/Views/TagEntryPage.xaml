@@ -1,0 +1,30 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:prism="clr-namespace:Prism.Mvvm;assembly=Prism.Forms"
+             prism:ViewModelLocator.AutowireViewModel="True"
+             xmlns:tag="clr-namespace:DLToolkit.Forms.Controls;assembly=DLToolkit.Forms.Controls.TagEntryView"
+             x:Class="PrismNavigationService.Views.TagEntryPage"
+             Title="{Binding Title}"
+             >
+    <StackLayout BackgroundColor="Red">
+        <tag:TagEntryView TagItems="{Binding Tags}"
+                          x:Name="tag"
+                          >
+
+            <tag:TagEntryView.TagItemTemplate>
+                <DataTemplate>
+                    <Frame BackgroundColor="Orange"  OutlineColor="Transparent" Padding="10">
+                        <StackLayout Orientation="Horizontal" Spacing="5">
+                            <Image Source="ic_remove_circle.png" WidthRequest="10" />
+                            <Label Text="{Binding tAG}"
+                                                   TextColor="White"
+                                                   
+                                                   />
+                        </StackLayout>
+                    </Frame>
+                </DataTemplate>
+            </tag:TagEntryView.TagItemTemplate>
+        </tag:TagEntryView> 
+    </StackLayout>
+</ContentPage>
