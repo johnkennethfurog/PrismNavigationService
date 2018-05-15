@@ -5,8 +5,8 @@
              Title="{Binding Title}">
 
     <StackLayout HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand">
-        <Button Text="Go to Tags" Command="{Binding GotoTags}"/>
-        <Button Text="Go to Custom Layout" Command="{Binding GotoCustLayout}"/>
+        <Button Text="Go to Custom Layout using Prism Nav Service" Command="{Binding GotoCustLayout}"/>
+        <Button Text="Go to Custom Layout using Navigation" x:Name="btnNav"/>
     </StackLayout>
 
 </ContentPage>

@@ -12,6 +12,12 @@ namespace PrismNavigationService.Views
 		public MainPage ()
 		{
 			InitializeComponent ();
+            btnNav.Clicked += BtnNav_Clicked;
 		}
-	}
+
+        private async void BtnNav_Clicked(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new CustomLayoutPage());
+        }
+    }
 }
